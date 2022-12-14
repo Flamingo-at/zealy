@@ -69,7 +69,6 @@ async def main():
                                           'user-agent': user_agent
                                       })
                     (await response.json())['status']
-
                 else:
                     response = await client.post(f'https://api.crew3.xyz/communities/{name}/quests/{quest_id}/claim',
                                       data={
@@ -82,20 +81,6 @@ async def main():
                                           'user-agent': user_agent
                                       })
                     (await response.json())['status']
-
-                # response = await client.post(f'https://api.crew3.xyz/communities/{name}/quests/{quest_id}/claim',
-                #                   data={
-                #                       "value": "clicked",
-                #                       "questId": quest_id,
-                #                       "type": 'link'
-                #                   }, headers={
-                #                       'origin': f'https://{name}.crew3.xyz',
-                #                       'cookie': access_token,
-                #                       'user-agent': user_agent
-                #                   })
-                # print(await response.json())
-
-
         except:
             logger.error('Error\n')
         else:
@@ -113,15 +98,9 @@ if __name__ == '__main__':
     print("Bot Crew3 @flamingoat\n")
 
     task_type = input('Task type: daily claim(1) or telegram(2): ')
-
     name = input('Name crew3: ')
     quest_id = input('Quest id: ')
     ref = input('Ref code: ')
     delay = int(input('Delay(sec): '))
-
-    # name = 'cedrofinance'
-    # quest_id = '36ed1284-ba94-4eb5-910d-7e8bbe5358fd'
-    # ref = 'A2HYVZm0rH5UQY23MKOwC'
-    # delay = 10
 
     asyncio.run(main())
