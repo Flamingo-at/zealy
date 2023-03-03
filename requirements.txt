@@ -1,5 +1,5 @@
-aiohttp==3.8.1
-eth_account==0.5.8
+eth_account==0.5.9
 loguru==0.6.0
 pyuseragents==1.0.5
+requests==2.28.2
 web3==5.27.0
