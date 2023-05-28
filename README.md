@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ## 💻 Preparing
 + Run the bot:
 ```python
-python crew3.py
+python zealy.py
 ```
 
 ## ✔️ Usage
